@@ -11,7 +11,7 @@ void handle_signal(int signal)
 	(void) signal;
 
 	write(STDERR_FILENO, "\n", 1);
-	write(STDERR_FILENO, "myshell$ ", 9);
+	write(STDERR_FILENO, "#cisfun$ ", 9);
 }
 /**
  * handle_file - parses through list of commands in a file and executes
@@ -65,10 +65,9 @@ void shell_loop(char *filename)
 	else
 	{
 		while (1)
-		{
-			/* only print a prompt if isatty is true */
+		{/* only print a prompt if isatty is true */
 			if (isatty(STDIN_FILENO))
-				write(STDERR_FILENO, "$ ", 2);
+				write(STDERR_FILENO, "#cisfun$ ", 9);
 			buff = do_memory(buffsize, NULL);
 			/* read command, getline and check if it fails */
 			while ((lgetline = _getline(buff, STDIN_FILENO)) < 0)

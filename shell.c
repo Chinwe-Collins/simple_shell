@@ -58,7 +58,7 @@ void print_error(char *command, int status, char *extra)
 	switch (status)
 	{
 	case 2:
-		msg = "not found";
+		msg = "No such file or directory";
 		break;
 	case 126:
 		msg = "Permission denied";

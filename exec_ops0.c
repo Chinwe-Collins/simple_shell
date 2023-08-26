@@ -139,7 +139,7 @@ int exec_nbtin(char **tokens)
 /**
   * search_funcs - search for ;, &&, || operators
   * @tokens: tokens from std input
-  * Return: 0 if none, 1 if ';', 2 if '&&' 3 if '||'
+  * Return: 0 if none, 1 if ';', 2 if '&&' 3 if '||' 4 if 'echo $?'
   */
 int search_funcs(char **tokens)
 {
